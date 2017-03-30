@@ -1,8 +1,9 @@
 // @flow
 
 import 'babel-polyfill'
-import setUpSocket from './socket'
+
 import Immutable from 'immutable'
+import $ from 'jquery'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
@@ -10,12 +11,13 @@ import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
-import $ from 'jquery'
 import Tether from 'tether'
+
 import App from '../shared/app'
+import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR } from '../shared/config'
 import helloReducer from '../shared/reducer/hello'
 import { isProd } from '../shared/util'
-import { APP_CONTAINER_SELECTOR, JSS_SSR_SELECTOR } from '../shared/config'
+import setUpSocket from './socket'
 
 window.jQuery = $
 window.Tether = Tether
