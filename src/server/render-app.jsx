@@ -41,4 +41,3 @@ const renderApp = (location: string, plainPartialState: ?Object, routerContext: 
 }
 
 export default renderApp
-0
