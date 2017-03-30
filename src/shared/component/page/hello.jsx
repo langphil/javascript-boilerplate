@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import Message from '../../container/message'
 import HelloButton from '../../container/hello-button'
 
-const title = 'Hello Page'
+const title = 'Hello World'
 
 const HelloPage = () =>
   <div className="container mt-4">
